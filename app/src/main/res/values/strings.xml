@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">SusAmongUs</string>
+    <string name="label_report_dead_body">Report Dead Body</string>
+    <string name="label_description_hint">Enter description for your dead body report</string>
+    <string name="label_details">Details</string>
+    <string name="label_solved">Solved</string>
+    <string name="label_suspicious_behavior_title">Suspicious Behavior Title</string>
+    <string name="label_report">Report</string>
+
+    <string-array name="player_colors">
+        <item>Red</item>
+        <item>Blue</item>
+        <item>Green</item>
+        <item>Yellow</item>
+        <item>Orange</item>
+        <item>Black</item>
+        <item>White</item>
+        <item>Purple</item>
+    </string-array>
+
+    <string-array name="room_names">
+        <item>Cafeteria</item>
+        <item>Weapons</item>
+        <item>Navigation</item>
+        <item>O2</item>
+        <item>Shields</item>
+        <item>Communications</item>
+        <item>Storage</item>
+        <item>Admin</item>
+        <item>Electrical</item>
+        <item>Lower Engine</item>
+        <item>Security</item>
+        <item>Reactor</item>
+        <item>Upper Engine</item>
+        <item>MedBay</item>
+    </string-array>
+</resources>

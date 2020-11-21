@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    android:orientation="vertical"
+    tools:context=".ui.ReportDeadBodyFragment">
+
+    <TextView
+        android:id="@+id/title"
+        style="?android:listSeparatorTextViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/label_report_dead_body"
+        app:layout_constraintBottom_toTopOf="@id/titleEditText"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <EditText
+        android:id="@+id/titleEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/label_description_hint"
+        app:layout_constraintBottom_toTopOf="@id/detailLabel"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        />
+
+    <TextView
+        android:id="@+id/detailLabel"
+        style="?android:listSeparatorTextViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/label_details"
+        app:layout_constraintBottom_toTopOf="@id/playerColorSpinner"
+        app:layout_constraintTop_toBottomOf="@id/titleEditText"
+        android:layout_marginTop="12dp"/>
+
+    <Spinner
+        android:id="@+id/playerColorSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toTopOf="@id/selectedPlayerImage"
+        app:layout_constraintTop_toBottomOf="@id/detailLabel"
+        android:layout_marginTop="12dp"
+        android:entries="@array/player_colors"/>
+
+    <ImageView
+        android:id="@+id/selectedPlayerImage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/playerColorSpinner"
+        app:layout_constraintBottom_toTopOf="@id/locationSpinner"
+        android:layout_marginTop="12dp"
+        tools:src="@drawable/red_player" />
+
+    <Spinner
+        android:id="@+id/locationSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toTopOf="@id/reportButton"
+        app:layout_constraintTop_toBottomOf="@id/selectedPlayerImage"
+        android:layout_marginTop="12dp"
+        android:entries="@array/room_names"/>
+
+    <Button
+        android:id="@+id/reportButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/locationSpinner"
+        app:layout_constraintBottom_toTopOf="@id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/label_report"/>
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/ic_among_us_shhh"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/reportButton"
+        android:layout_marginTop="24dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
