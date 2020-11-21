@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.elliottco.susamongus.R
 import com.elliottco.susamongus.model.DeadBodyReport
 import com.elliottco.susamongus.model.PlayerColor
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import dagger.hilt.android.AndroidEntryPoint
 
 /**
@@ -28,6 +29,7 @@ class ReportListFragment : Fragment() {
     private val susAmongUsViewModel by viewModels<SusAmongUsViewModel>()
 
     private lateinit var recyclerView: RecyclerView
+    private lateinit var fab: FloatingActionButton
     private var adapter: SuspiciousBehaviorAdapter? = null
 
     companion object {
@@ -45,11 +47,16 @@ class ReportListFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_suspicious_behavior_list, container, false).apply {
+        return inflater.inflate(R.layout.fragment_sus_report_list, container, false).apply {
             recyclerView = findViewById(R.id.recyclerView)
+            fab = findViewById(R.id.fab)
 
             recyclerView.layoutManager = LinearLayoutManager(context)
             recyclerView.addItemDecoration(DividerItemDecoration(context, LinearLayout.HORIZONTAL))
+
+            fab.setOnClickListener {
+                Toast.makeText(context, "Creating new report...", Toast.LENGTH_SHORT).show()
+            }
 
             updateUi()
         }
