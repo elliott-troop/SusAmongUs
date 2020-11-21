@@ -11,5 +11,6 @@ Implements:
 - Dagger Hilt
 - MVVM
 - Room Database
+- Navigation
 
 ![Screenshot](https://github.com/elliott-troop/SusAmongUs/blob/master/app/src/main/res/drawable-v24/ic_report_list_screenshot.PNG)
