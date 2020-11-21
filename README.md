@@ -12,4 +12,4 @@ Implements:
 - MVVM
 - Room Database
 
-![Screenshot](https://github.com/elliott-troop/SusAmongUs/blob/master/app/src/main/res/drawable-v24/ic_report_list_screenshot.png)
+![Screenshot](https://github.com/elliott-troop/SusAmongUs/blob/master/app/src/main/res/drawable-v24/ic_report_list_screenshot.PNG)
